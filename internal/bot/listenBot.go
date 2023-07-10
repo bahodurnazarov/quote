@@ -16,7 +16,7 @@ func Bot() {
 	for {
 		select {
 		case <-timer.C:
-			resp, err := http.Get("http://localhost:1323/bot")
+			resp, err := http.Get("http://localhost:9989/")
 
 			if err != nil {
 				lg.Errl.Fatal(err)

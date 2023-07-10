@@ -1,14 +1,13 @@
 package main
 
 import (
-	"log"
 	run "quote/internal/bot"
-	lg "quote/pkg/utils"
+	"quote/internal/handler"
+	env "quote/pkg/init"
 )
 
 func main() {
+	env.Init()
 	go run.Bot()
-	lg.Errl.Println("hdf")
-	lg.Server.Println("32")
-	log.Println("3ed")
+	handler.Route()
 }
